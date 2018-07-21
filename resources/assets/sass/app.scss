@@ -79,3 +79,11 @@ body {
   bottom: 0;
   width: 100%;
 }
+
+.captcha {
+  // display: block;
+  margin-top: .5rem;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid grey;
+}

@@ -10556,3 +10556,10 @@ body {
   width: 100%;
 }
 
+.captcha {
+  margin-top: .5rem;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
