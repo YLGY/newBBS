@@ -10534,6 +10534,10 @@ html {
   font-weight: 600;
 }
 
+.header__img {
+  border-radius: 50%;
+}
+
 body {
   margin-bottom: 60px;
 }
