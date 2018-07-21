@@ -87,3 +87,42 @@ body {
   padding: 5px;
   border: 1px solid grey;
 }
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  
+  &__item {
+    padding: 1rem .5rem;
+    background: white;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid grey;
+    }
+  }
+}
+
+.left {
+  flex: 0 1 20%;
+  border: 1px solid grey;
+  padding: 1rem .5rem;
+  background: white;
+
+}
+
+.right {
+  flex: 0 1 75%;
+
+  &__header,
+  &__content {
+    border: 1px solid grey;
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+
+    h2 {
+      margin: 0;
+    }
+  }
+}

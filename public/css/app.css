@@ -10563,3 +10563,49 @@ body {
   border: 1px solid grey;
 }
 
+.info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info-container__item {
+  padding: 1rem .5rem;
+  background: white;
+}
+
+.info-container__item:not(:last-child) {
+  border-bottom: 1px solid grey;
+}
+
+.left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+  border: 1px solid grey;
+  padding: 1rem .5rem;
+  background: white;
+}
+
+.right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 75%;
+          flex: 0 1 75%;
+}
+
+.right__header,
+.right__content {
+  border: 1px solid grey;
+}
+
+.right__header {
+  margin-bottom: 1rem;
+}
+
+.right__header h2 {
+  margin: 0;
+}
+
