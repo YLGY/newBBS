@@ -10,14 +10,14 @@
                         >
             </div>
             <div class="left__info info-container__item">
-                <h4>diversonal Info</h4>
+                <h4>Personal Info</h4>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam repellat, commod.
+                    {{ $user->introduction }}
                 </p>
             </div>
             <div class="left__time info-container__item">
                 <h4>Register at</h4>
-                <span>21/07/2018</span>
+                <span>{{ $user->created_at->diffForHumans() }}</span>
             </div>
         </div>
 

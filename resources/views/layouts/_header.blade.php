@@ -19,11 +19,16 @@
                 </li>
             @else
                 <li class="header__list">
-                    <a href="#" class="header__link">
+                    <a href="{{ route('users.show', Auth::user()) }}" class="header__link">
                         <img src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" 
                             class="header__img" width="30px" height="30px"
                         >
                         {{ Auth::user()->name }}
+                    </a>
+                </li>
+                <li class="header__list">
+                    <a href="{{ route('users.edit', Auth::user()) }}" class="header__link">
+                        Edit
                     </a>
                 </li>
                 <li class="header__list">
