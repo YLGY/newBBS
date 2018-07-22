@@ -4,10 +4,8 @@
 @section('content')
     <div class="container info-container">
         <div class="left">
-            <div class="left__img info-container__item">
-                <img src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" 
-                            class="header__img" width="30px" height="30px"
-                        >
+            <div class="info-container__item">
+                <img src="{{ $user->avatar }}" class="left__img">
             </div>
             <div class="left__info info-container__item">
                 <h4>Personal Info</h4>

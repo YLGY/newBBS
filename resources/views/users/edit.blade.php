@@ -9,7 +9,8 @@
                 <div class="card-header"> <i class="glyphicon glyphicon-edit"></i> Update Info</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('users.update', $user->id) }}" aria-label="{{ __('Update') }}">
+                    <form method="POST" action="{{ route('users.update', $user->id) }}" aria-label="{{ __('Update') }}"
+                            accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
 
@@ -42,7 +43,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="introduction" class="col-md-4 col-form-label text-md-right">{{ __('introduction') }}</label>
+                            <label for="introduction" class="col-md-4 col-form-label text-md-right">{{ __('Introduction') }}</label>
 
                             <div class="col-md-6">
                                 <textarea id="introduction" rows="3" class="form-control{{ $errors->has('introduction') ? ' is-invalid' : '' }}" name="introduction">{{ $user->introduction }}</textarea>
@@ -51,6 +52,25 @@
                                         <strong>{{ $errors->first('introduction') }}</strong>
                                     </span>
                                 @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="avatar" type="file" class="form-control{{ $errors->has('avatar') ? ' is-invalid' : '' }}" name="avatar">
+                                @if ($errors->has('avatar'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('avatar') }}</strong>
+                                    </span>
+                                @endif
+                                
+                                @if ($user->avatar)
+                                    <br>
+                                    <img src="{{ $user->avatar }}" width="200" class="thumbnail img-responsive">                                    
+                                @endif
+
                             </div>
                         </div>
 
