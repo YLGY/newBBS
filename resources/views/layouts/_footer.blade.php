@@ -1,11 +1,11 @@
 <footer class="footer">
-    <div class="left">
+    <div class="footer__left">
         刻意练习，每日精进
     </div>
     <div class="time">
         &copy;{{ date('Y') }}
     </div>
-    <div class="right">
+    <div class="footer__right">
         <ul>
             <li>
                 <a href="#">About Us</a>
