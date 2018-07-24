@@ -1,9 +1,40 @@
 <header class="header">
-    <div class="header__logo header__item">
-        <a href="{{ url('/') }}">
-            newBBS
-        </a>
+    <div class="header__left">
+        <div class="header__logo header__item">
+            <a href="{{ url('/') }}">
+                newBBS
+            </a>
+        </div>
+
+        
     </div>
+    
+    <div class="header__nav--category">
+        
+        <ul class="header__nav">
+            <li class="header__list 
+                        {{ active_class(if_route('topics.index')) }}">
+                <a href="{{ route('topics.index') }}" class="header__link">Topics</a>
+            </li>
+            <li class="header__list
+                        {{ active_class(if_route('categories.show') && if_route_param('category', 1)) }}">
+                <a href="{{ route('categories.show', 1) }}" class="header__link">Share</a>
+            </li>
+            <li class="header__list
+                        {{ active_class(if_route('categories.show') && if_route_param('category', 2)) }}">
+                <a href="{{ route('categories.show', 2) }}" class="header__link">Tutorial</a>
+            </li>
+            <li class="header__list
+            {{ active_class(if_route('categories.show') && if_route_param('category', 3)) }}">
+                <a href="{{ route('categories.show', 3) }}" class="header__link">Q&A</a>
+            </li>
+            <li class="header__list
+            {{ active_class(if_route('categories.show') && if_route_param('category', 4)) }}">
+                <a href="{{ route('categories.show', 4) }}" class="header__link">Notifications</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="header__right header__item">
         <ul class="header__nav">
             @guest

@@ -78,7 +78,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 1rem;
+  // padding: .5rem 1rem;
   box-shadow: 0px 1px 11px 2px rgba(112, 112, 112, 0.1);
   margin-bottom: 40px;
   border-top: 2px solid rgba(112, 112, 112, 0.1);
@@ -93,19 +93,45 @@ html {
     flex: 0 1 30%;
   }
 
-  &__nav {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-
   &__list {
     list-style: none;
     margin: 0 1.5rem;
+    position: relative;
   }
 
   &__link {
     font-weight: 600;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    // position: absolute;
+    // z-index: 2;
+
+    &--category {
+      margin-right: auto;
+      margin-left: 1rem;
+      // padding: 1rem 0;
+
+      .header__list {
+        margin: 0 .5rem;
+        padding: 0 .5rem;
+      }
+
+      .header__link {
+        line-height: 3.5rem;
+      }
+
+      .active {
+        background: rgb(209, 206, 206);
+        
+        .header__link {
+          color: white;
+        }
+      }
+    }
   }
 
   &__img {

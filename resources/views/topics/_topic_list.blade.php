@@ -12,12 +12,12 @@
                         <a href="{{ route('topics.show', [$topic->id]) }}" title="{{ $topic->title }}">
                             {{ $topic->title }}
                         </a>
-                        <a href="{{ route('topics.show', [$topic->id]) }}">
+                        <a href="{{ route('topics.show', $topic->id) }}">
                             <span class="media__reply-count">{{ $topic->reply_count }}</span>
                         </a>
                     </div>
                     <div class="media__content">
-                        <a href="#" title="{{ $topic->category->name }}">
+                        <a href="{{ route('categories.show', $topic->category->id) }}" title="{{ $topic->category->name }}">
                             <span class="media__icon icon-folder-open"></span>
                             {{ $topic->category->name }}
                         </a>
