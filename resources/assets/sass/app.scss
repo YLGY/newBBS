@@ -34,8 +34,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-new-message:before {
+  content: "\e900";
+}
 .icon-quill:before {
   content: "\e907";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
+.icon-clock:before {
+  content: "\e94e";
+}
+.icon-user:before {
+  content: "\e971";
 }
 .icon-plus:before {
   content: "\ea0a";
@@ -165,5 +177,58 @@ body {
     h2 {
       margin: 0;
     }
+  }
+}
+
+.media-list {
+
+}
+
+.media {
+  margin-bottom: 1rem;
+
+  &:not(:last-child) {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid grey;
+  }
+
+  &__body {
+    width: 100%;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reply-count {
+    padding: .2rem 1rem;
+    background: rgb(187, 180, 180);
+    color: white;
+    border-radius: 50px;
+  }
+
+  &__left {
+    margin-right: 1rem;
+  }
+
+  &__avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  &__content {
+    a {
+      color: rgb(187, 180, 180);
+    }
+  }
+
+  &__time,
+  &__icon {
+    color: rgb(187, 180, 180);
+  }
+
+  &__span {
+    margin: 0 .3rem;
   }
 }

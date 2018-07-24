@@ -10471,8 +10471,8 @@ a.text-dark:focus {
 
 @font-face {
   font-family: 'sell-icon';
-  src: url(/fonts/sell-icon.eot?1df01f75dd74569466d22547f856bb31);
-  src: url(/fonts/sell-icon.eot?1df01f75dd74569466d22547f856bb31) format("embedded-opentype"), url(/fonts/sell-icon.ttf?71fdc0a3e3b0ff48e1547c3cb7f230c5) format("truetype"), url(/fonts/sell-icon.woff?0a6cf571e3f037f8c7d48318acdb919d) format("woff"), url(/fonts/sell-icon.svg?affd8ef4c376bd5cb66be1da13462e3c) format("svg");
+  src: url(/fonts/sell-icon.eot?66a0362d264e5bfbb66d5010a74ecf83);
+  src: url(/fonts/sell-icon.eot?66a0362d264e5bfbb66d5010a74ecf83) format("embedded-opentype"), url(/fonts/sell-icon.ttf?216888f35addb300b2a787fe1a9d4639) format("truetype"), url(/fonts/sell-icon.woff?ee7a483d48bb0991cf6eea7e68d37631) format("woff"), url(/fonts/sell-icon.svg?71fe64407b726552d70fd3656a17c056) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -10492,8 +10492,24 @@ a.text-dark:focus {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-new-message:before {
+  content: "\E900";
+}
+
 .icon-quill:before {
   content: "\E907";
+}
+
+.icon-folder-open:before {
+  content: "\E930";
+}
+
+.icon-clock:before {
+  content: "\E94E";
+}
+
+.icon-user:before {
+  content: "\E971";
 }
 
 .icon-plus:before {
@@ -10648,5 +10664,56 @@ body {
 
 .right__header h2 {
   margin: 0;
+}
+
+.media {
+  margin-bottom: 1rem;
+}
+
+.media:not(:last-child) {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+.media__body {
+  width: 100%;
+}
+
+.media__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.media__reply-count {
+  padding: .2rem 1rem;
+  background: #bbb4b4;
+  color: white;
+  border-radius: 50px;
+}
+
+.media__left {
+  margin-right: 1rem;
+}
+
+.media__avatar {
+  width: 52px;
+  height: 52px;
+}
+
+.media__content a {
+  color: #bbb4b4;
+}
+
+.media__time,
+.media__icon {
+  color: #bbb4b4;
+}
+
+.media__span {
+  margin: 0 .3rem;
 }
 
