@@ -90,7 +90,7 @@ html {
   }
 
   &__right {
-    flex: 0 1 30%;
+    flex: 0 1 35%;
   }
 
   &__list {
@@ -270,5 +270,13 @@ body {
     &:not(:last-child) {
       border-bottom: 1px solid grey;
     }
+  }
+}
+
+.sidebar {
+
+  &__create-btn {
+    width: 100%;
+    font-weight: 700;
   }
 }

@@ -50,6 +50,11 @@
                 </li>
             @else
                 <li class="header__list">
+                    <a href="{{ route('topics.create') }}">
+                        <span class="icon-plus header__link"></span>
+                    </a>
+                </li>
+                <li class="header__list">
                     <a href="{{ route('users.show', Auth::user()) }}" class="header__link">
                         <img src="{{ Auth::user()->avatar }}" 
                             class="header__img" width="30px" height="30px"

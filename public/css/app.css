@@ -10562,8 +10562,8 @@ html {
 
 .header__right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
+      -ms-flex: 0 1 35%;
+          flex: 0 1 35%;
 }
 
 .header__list {
@@ -10751,5 +10751,10 @@ body {
 
 .topic-list__item:not(:last-child) {
   border-bottom: 1px solid grey;
+}
+
+.sidebar__create-btn {
+  width: 100%;
+  font-weight: 700;
 }
 
