@@ -280,3 +280,59 @@ body {
     font-weight: 700;
   }
 }
+
+.topic {
+  display: flex;
+  justify-content: space-between;
+
+  &__author {
+    width: 22%;
+    padding: .5rem;
+    border: 1px solid rgb(213, 204, 204);
+    height: 340px;
+    background: white;
+
+    &-name {
+      text-align: center;
+      padding: .5rem 0 1rem;
+      border-bottom: 1px solid rgb(213, 204, 204);
+    }
+
+    &-avatar {
+      text-align: center;
+      padding-top: 1rem;
+
+      img {
+        padding: 5px;
+        border: 1px solid rgb(213, 204, 204);   
+        border-radius: 5px;     
+      }
+    }
+  }
+
+  &__content {
+    flex: 0 1 75%;
+    background: white;
+
+    padding: 1.5rem 1rem;
+    border: 1px solid rgb(213, 204, 204);
+  }
+
+  &__header,
+  &__sub {
+    text-align: center;
+  }
+
+  &__sub {
+    margin-bottom: 2rem;
+  }
+
+  &__body {
+    margin-bottom: 2rem;
+    margin: 0 .5rem;
+  }
+
+  &__footer {
+    text-align: right;
+  }
+}

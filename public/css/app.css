@@ -10758,3 +10758,64 @@ body {
   font-weight: 700;
 }
 
+.topic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topic__author {
+  width: 22%;
+  padding: .5rem;
+  border: 1px solid #d5cccc;
+  height: 340px;
+  background: white;
+}
+
+.topic__author-name {
+  text-align: center;
+  padding: .5rem 0 1rem;
+  border-bottom: 1px solid #d5cccc;
+}
+
+.topic__author-avatar {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.topic__author-avatar img {
+  padding: 5px;
+  border: 1px solid #d5cccc;
+  border-radius: 5px;
+}
+
+.topic__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 75%;
+          flex: 0 1 75%;
+  background: white;
+  padding: 1.5rem 1rem;
+  border: 1px solid #d5cccc;
+}
+
+.topic__header,
+.topic__sub {
+  text-align: center;
+}
+
+.topic__sub {
+  margin-bottom: 2rem;
+}
+
+.topic__body {
+  margin-bottom: 2rem;
+  margin: 0 .5rem;
+}
+
+.topic__footer {
+  text-align: right;
+}
+
