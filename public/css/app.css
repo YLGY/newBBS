@@ -10739,3 +10739,17 @@ body {
   margin: 0 .3rem;
 }
 
+.topic-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .5rem 0;
+}
+
+.topic-list__item:not(:last-child) {
+  border-bottom: 1px solid grey;
+}
+

@@ -29,7 +29,21 @@
             <hr>
 
             <div class="right__content info-container__item">
-                Nothing yet.
+                <div class="card">
+                    <div class="card-header">
+                        <div class="nav nav-pills">
+                            <li class="nav-item active">
+                                <a href="#" class="nav-link">Topices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Replies</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
+                    </div>
+                </div>
             </div>
         </div>
     </div>

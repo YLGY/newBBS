@@ -58,7 +58,12 @@
                     </a>
                 </li>
                 <li class="header__list">
-                    <a href="{{ route('users.edit', Auth::user()) }}" class="header__link">
+                    <a href="{{ route('users.show', Auth::id()) }}" class="header__link">
+                        Details
+                    </a>
+                </li>
+                <li class="header__list">
+                    <a href="{{ route('users.edit', Auth::id()) }}" class="header__link">
                         Edit
                     </a>
                 </li>
