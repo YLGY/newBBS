@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Topic;
+use App\Jobs\TranslateSlug;
 
 // creating, created, updating, updated, saving,
 // saved,  deleting, deleted, restoring, restored
@@ -15,13 +16,13 @@ class TopicObserver
 
         $topic->excerpt = make_excerpt($topic->body);
 
-        if (!$topic->slug) {
-            $topic->slug = str_slug($topic->title);
-        }
+        
     }
 
-    public function updating(Topic $topic)
+    public function saved(Topic $topic)
     {
-        //
+        if (!$topic->slug) {
+            dispatch(new TranslateSlug($topic));
+        }
     }
 }
