@@ -7,8 +7,8 @@
         <div class="card">
             
             <div class="card-header">
-                <h1>
-                    <i class="icon-quill"></i> Topic /
+                <h1 class="text-center">
+                    <i class="icon-quill"></i>
                     @if($topic->id)
                         Edit #{{$topic->id}}
                     @else
@@ -27,8 +27,7 @@
                     <form action="{{ route('topics.store') }}" method="POST" accept-charset="UTF-8">
                 @endif
 
-                    @csrf
-
+                        @csrf
                             
                         <div class="form-group">
                             <label for="title-field">Title</label>
@@ -36,9 +35,9 @@
                         </div> 
                         <div class="form-group">
                             <select name="category_id" class="form-control" required>
-                                <option value="" hidden disabled selected>Please Select the category</option>
+                                <option value="" hidden disabled {{ $topic->id ? '' : 'selected'}}>Please Select the category</option>
                                 @foreach ($categories as $value)
-                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                    <option value="{{ $value->id }}" {{ $topic->category_id == $value->id ? 'selected' : '' }}>{{ $value->name }}</option>
                                 @endforeach
                             </select>
                         </div>
