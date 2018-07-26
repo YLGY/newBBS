@@ -333,6 +333,11 @@ body {
   }
 
   &__footer {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      margin-right: 1rem;
+    }
   }
 }

@@ -10816,6 +10816,15 @@ body {
 }
 
 .topic__footer {
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.topic__footer a {
+  margin-right: 1rem;
 }
 

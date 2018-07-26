@@ -30,15 +30,22 @@
             {!! $topic->body !!}
         </div>
 
-        <div class="topic__footer">
+        @can('update', $topic)
             <hr>
-            <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-primary btn-x" role="button">
-                Edit
-            </a>
-            <a href="#" class="btn btn-primary btn-xs" role="button">
-                Delete
-            </a>
-        </div>
+            <div class="topic__footer">
+                <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-primary btn-x" role="button">
+                    Edit
+                </a>
+                <form href="{{ route('topics.destroy', $topic->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+
+                    <button type="submit" class="btn btn-primary btn-xs" role="button">
+                        Delete
+                    </button>
+                </form>
+            </div>
+        @endcan
     </div>
 </div>
 
