@@ -2,7 +2,7 @@
     <ul class="topic-list">
         @foreach ($topics as $topic)
             <li class="topic-list__item">
-                <a href="{{ route('topics.show', $topic->id) }}">
+                <a href="{{ $topic->link() }}">
                     {{ $topic->title }}
                 </a>
                 <span class="topic-list__right">

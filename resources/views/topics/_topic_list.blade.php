@@ -9,10 +9,10 @@
                 </div>
                 <div class="media__body">
                     <div class="media__heading">
-                        <a href="{{ route('topics.show', [$topic->id]) }}" title="{{ $topic->title }}">
+                        <a href="{{ $topic->link() }}" title="{{ $topic->title }}">
                             {{ $topic->title }}
                         </a>
-                        <a href="{{ route('topics.show', $topic->id) }}">
+                        <a href="{{ $topic->link() }}">
                             <span class="media__reply-count">{{ $topic->reply_count }}</span>
                         </a>
                     </div>
