@@ -83,6 +83,19 @@ html {
   margin-bottom: 40px;
   border-top: 2px solid rgba(112, 112, 112, 0.1);
 
+  &__notifications {
+    padding: 3px 10px;
+    background: grey;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 1rem;
+
+    &-y {
+      background: red;
+    }
+  }
+
   &__logo {
     margin-left: 1rem;
     font-size: 1.2rem;
@@ -90,7 +103,7 @@ html {
   }
 
   &__right {
-    flex: 0 1 35%;
+    flex: 0 1 50%;
   }
 
   &__list {
@@ -122,6 +135,18 @@ html {
 
       .header__link {
         line-height: 3.5rem;
+      }
+
+      .header__notifications {
+        padding: 5px 10px;
+        background: grey;
+        color: white;
+
+        &-y {
+          padding: 5px 10px;
+          background: red;
+          color: white;
+        }
       }
 
       .active {
@@ -418,4 +443,31 @@ body {
 
 .pagination {
   justify-content: center;
+}
+
+.notification {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgb(213, 204, 204);
+  }
+
+  &__right {
+    flex: 0 1 10%;
+  }
+
+  &__left {
+    flex: 1;
+
+    display: flex;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+
+    margin-right: 1rem;
+  }
 }

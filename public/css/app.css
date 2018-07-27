@@ -10554,6 +10554,19 @@ html {
   border-top: 2px solid rgba(112, 112, 112, 0.1);
 }
 
+.header__notifications {
+  padding: 3px 10px;
+  background: grey;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  line-height: 1rem;
+}
+
+.header__notifications-y {
+  background: red;
+}
+
 .header__logo {
   margin-left: 1rem;
   font-size: 1.2rem;
@@ -10562,8 +10575,8 @@ html {
 
 .header__right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 35%;
-          flex: 0 1 35%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .header__list {
@@ -10598,6 +10611,18 @@ html {
 
 .header__nav--category .header__link {
   line-height: 3.5rem;
+}
+
+.header__nav--category .header__notifications {
+  padding: 5px 10px;
+  background: grey;
+  color: white;
+}
+
+.header__nav--category .header__notifications-y {
+  padding: 5px 10px;
+  background: red;
+  color: white;
 }
 
 .header__nav--category .active {
@@ -10904,5 +10929,38 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notification:not(:last-child) {
+  border-bottom: 1px solid #d5cccc;
+}
+
+.notification__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 10%;
+          flex: 0 1 10%;
+}
+
+.notification__left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.notification__avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 1rem;
 }
 

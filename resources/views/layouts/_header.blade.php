@@ -49,9 +49,16 @@
                     </a>
                 </li>
             @else
-                <li class="header__list">
-                    <a href="{{ route('topics.create') }}">
+            <li class="header__list">
+                <a href="{{ route('topics.create') }}">
                         <span class="icon-plus header__link"></span>
+                    </a>
+                </li>
+                <li class="header__list">
+                    <a href="{{ route('notifications.index') }}">
+                        <span class="header__notifications {{ Auth::user()->notification_count > 0 ? 'header__notifications-y' : '' }}">
+                            {{ Auth::user()->notification_count }}
+                        </span>
                     </a>
                 </li>
                 <li class="header__list">
