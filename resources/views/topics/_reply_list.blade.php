@@ -23,11 +23,18 @@
 
             </div>
 
-            <div class="reply__right">
-                <a href="#" class="btn btn-danger btn-sm">
-                    Delete
-                </a>
-            </div>
+            @can('destroy', $reply)
+                <div class="reply__right">
+                    <form action="{{ route('replies.destroy', $reply->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
+                </div>
+            @endcan
         </div>
     @endforeach
 </div>
