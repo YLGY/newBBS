@@ -10873,6 +10873,12 @@ body {
   height: 48px;
 }
 
+.reply__box {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d5cccc;
+}
+
 .user-reply {
   margin-bottom: 1rem;
 }
