@@ -33,15 +33,19 @@
                     <div class="card-header">
                         <div class="nav nav-pills">
                             <li class="nav-item active">
-                                <a href="#" class="nav-link">Topices</a>
+                                <a href="{{ route('users.show', $user->id) }}" class="nav-link">Topices</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Replies</a>
+                                <a href="{{ route('users.show', [$user->id, 'tab' => 'replies']) }}" class="nav-link">Replies</a>
                             </li>
                         </div>
                     </div>
                     <div class="card-body">
-                        @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
+                        @if (if_query('tab', 'replies'))
+                            @include('users._replies', ['replies' => $user->replies()->with('topic')->recent()->paginate(5)])
+                        @else
+                            @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
+                        @endif
                     </div>
                 </div>
             </div>
